@@ -81,7 +81,7 @@ export default async function Home() {
               <Badge className="bg-white">사장님용 진단 + 해결책</Badge>
               <div className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-3 py-1 text-xs font-semibold text-white">
                 <Sparkles className="size-3.5" />
-                실제 매장 기준으로
+                AI + 전문가 관점
               </div>
             </div>
 
@@ -228,7 +228,7 @@ export default async function Home() {
               신뢰 기준
             </Badge>
             <CardTitle className="text-2xl font-semibold text-white">
-              AI가 빠르게 분석하고, 실제 장사 기준으로 정리합니다
+              AI와 전문가 관점으로 분석하고, 실제 장사 기준으로 정리합니다
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-sm leading-7 text-white/70">
