@@ -39,6 +39,7 @@ const miniStats = [
 
 const outputPreview = [
   "가장 먼저 고쳐야 할 문제 3가지",
+  "지금 바로 할 해결책",
   "리뷰 답글 예시",
   "메뉴 구성 개선안",
   "배달앱/SNS 홍보 문구",
@@ -56,7 +57,7 @@ const reasons = [
     description: "마케팅 용어보다, 오늘 무엇을 바꾸면 되는지 중심으로 알려드립니다.",
   },
   {
-    title: "바로 붙여 넣어 쓸 수 있는 문구",
+    title: "바로 붙여 넣어 쓸 수 있는 홍보 문구",
     description:
       "리뷰 답글, 배달앱 소개글, SNS 문구, 전단 문구까지 바로 사용할 수 있게 제공합니다.",
   },
@@ -77,7 +78,7 @@ export default async function Home() {
         <Card className="paper-panel border-[#d8cab8] bg-[#fffaf4]">
           <CardContent className="px-5 py-7 sm:px-8 sm:py-9 lg:px-10 lg:py-11">
             <div className="flex flex-wrap items-center gap-3">
-              <Badge className="bg-white">사장님용 운영 진단</Badge>
+              <Badge className="bg-white">사장님용 진단 + 해결책</Badge>
               <div className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-3 py-1 text-xs font-semibold text-white">
                 <Sparkles className="size-3.5" />
                 실제 매장 기준으로
@@ -108,7 +109,7 @@ export default async function Home() {
             <p className="mt-5 max-w-[34rem] text-sm leading-7 text-[#5f574e] sm:text-base sm:leading-8 lg:text-lg">
               리뷰가 문제인지, 메뉴가 약한지, 홍보 문구가 부족한지
               <br className="hidden sm:block" />
-              매장 상황을 기준으로 먼저 손봐야 할 일을 정리해드립니다.
+              매장 상황을 기준으로 먼저 손봐야 할 일과 해결 방법을 정리해드립니다.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -150,7 +151,7 @@ export default async function Home() {
                     진단 예시
                   </div>
                   <h2 className="mt-3 text-xl font-semibold tracking-tight sm:text-2xl">
-                    매장 상태를 한눈에 보고, 바로 실행할 수 있게 정리합니다
+                    매장 상태를 한눈에 보고, 해결책까지 바로 실행할 수 있게 정리합니다
                   </h2>
                 </div>
                 <div className="w-fit rounded-[22px] bg-white/8 px-4 py-3 text-right">
@@ -237,7 +238,7 @@ export default async function Home() {
             <p>
               리뷰, 메뉴, 홍보 상황을 함께 보고
               <br />
-              사장님이 오늘 바로 실행할 수 있는 순서로 제안합니다.
+              사장님이 오늘 직접 실행할 해결책과 홍보 방법을 순서대로 제안합니다.
             </p>
             <div className="grid gap-2 pt-1 sm:grid-cols-3">
               <Badge className="justify-center border-white/15 bg-white/8 text-white">리뷰</Badge>
