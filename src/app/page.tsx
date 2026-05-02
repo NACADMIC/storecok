@@ -109,7 +109,7 @@ export default async function Home() {
             <p className="mt-5 max-w-[34rem] text-sm leading-7 text-[#5f574e] sm:text-base sm:leading-8 lg:text-lg">
               리뷰가 문제인지, 메뉴가 약한지, 홍보 문구가 부족한지
               <br className="hidden sm:block" />
-              매장 상황을 기준으로 먼저 손봐야 할 일과 해결 방법을 정리해드립니다.
+              매장 상황을 기준으로 먼저 손봐야 할 일과 맞춤형 전략, 마케팅, 홍보 방법을 정리해드립니다.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -238,7 +238,7 @@ export default async function Home() {
             <p>
               리뷰, 메뉴, 홍보 상황을 함께 보고
               <br />
-              사장님이 오늘 직접 실행할 해결책과 홍보 방법을 순서대로 제안합니다.
+              사장님이 오늘 직접 실행할 해결책과 맞춤형 전략, 마케팅, 홍보 방법을 순서대로 제안합니다.
             </p>
             <div className="grid gap-2 pt-1 sm:grid-cols-3">
               <Badge className="justify-center border-white/15 bg-white/8 text-white">리뷰</Badge>
