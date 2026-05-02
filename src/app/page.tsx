@@ -93,7 +93,7 @@ export default async function Home() {
                 <span className="block">매장 고민,</span>
                 <span className="block whitespace-nowrap">감으로 버티지 말고</span>
                 <span className="mt-1 block">
-                  <span className="inline-block rounded-full bg-[#fff2a8] px-3 py-1 align-middle text-[0.56em] sm:px-4">
+                  <span className="inline-block rounded-full bg-[#fff2a8] px-4 py-1.5 align-middle text-[0.68em] font-semibold sm:px-5">
                     3분 만에
                   </span>
                   <span className="ml-2">진단하세요</span>
