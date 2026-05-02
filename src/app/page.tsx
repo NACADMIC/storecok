@@ -33,9 +33,9 @@ const features = [
 ];
 
 const miniStats = [
-  { label: "입력 시간", value: "3분" },
+  { label: "긴급 진단", value: "3분" },
   { label: "진단 기준", value: "매장 상황 중심" },
-  { label: "마케팅 실행", value: "셀프로 가능" },
+  { label: "프리미엄 보고서", value: "2영업일 내" },
 ];
 
 const outputPreview = [
@@ -45,6 +45,7 @@ const outputPreview = [
   "메뉴 구성 개선안",
   "배달앱/SNS 홍보 문구",
   "7일 실행 플랜",
+  "프리미엄 진단보고서(결제 시 2영업일 내)",
 ];
 
 const reasons = [
@@ -127,6 +128,11 @@ export default async function Home() {
                 <Link href="/demo-report">결과 예시 보기</Link>
               </Button>
             </div>
+
+            <p className="mt-3 text-sm leading-6 text-[#5f574e]">
+              긴급 진단은 3분 안에 확인할 수 있고, 프리미엄 결제 시 2영업일 내
+              프리미엄 진단보고서를 받아보실 수 있습니다.
+            </p>
 
             <div className="mt-8 grid auto-rows-fr gap-3 sm:grid-cols-3">
               {miniStats.map((item) => (
