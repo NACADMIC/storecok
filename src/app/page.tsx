@@ -84,7 +84,7 @@ export default async function Home() {
             </div>
 
             <div className="mt-6 space-y-3">
-              <h1 className="max-w-[12ch] text-[2rem] font-semibold leading-[1.02] tracking-[-0.05em] text-slate-950 sm:text-[3rem] lg:text-[3.55rem]">
+              <h1 className="max-w-[13ch] text-[2rem] font-semibold leading-[1.02] tracking-[-0.05em] text-slate-950 sm:text-[3rem] lg:text-[3.55rem]">
                 <span className="block">리뷰, 메뉴, 홍보</span>
                 <span className="mt-1 block">
                   매출 고민을
@@ -93,11 +93,11 @@ export default async function Home() {
                   </span>
                 </span>
               </h1>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 sm:flex-nowrap">
                 <img
                   src="/logo2.png"
                   alt="매장콕"
-                  className="h-auto w-full max-w-[150px] object-contain sm:max-w-[180px] lg:max-w-[210px]"
+                  className="h-auto w-full max-w-[150px] shrink-0 object-contain sm:max-w-[180px] lg:max-w-[210px]"
                 />
                 <div className="hidden h-px flex-1 bg-[#e4d9cc] sm:block" />
               </div>
@@ -125,7 +125,7 @@ export default async function Home() {
               {miniStats.map((item) => (
                 <div
                   key={item.label}
-                  className="flex min-h-[112px] h-full flex-col rounded-[22px] border border-[#e4d9cc] bg-white px-4 py-4"
+                  className="flex min-h-[112px] h-full flex-col justify-between rounded-[22px] border border-[#e4d9cc] bg-white px-4 py-4"
                 >
                   <div className="text-xs font-semibold tracking-[0.08em] text-[#8a7a69]">
                     {item.label}
@@ -218,7 +218,7 @@ export default async function Home() {
         ))}
       </section>
 
-      <section className="grid items-start gap-5 lg:grid-cols-[0.92fr_1.08fr]">
+      <section className="grid items-start gap-5 lg:grid-cols-2">
         <Card className="self-start bg-slate-950 text-white">
           <CardHeader>
             <Badge className="w-fit border-white/15 bg-white/8 text-white">
@@ -237,6 +237,11 @@ export default async function Home() {
               리뷰 답글 예시, 메뉴 보완안, SNS 문구, 전단 문구, 7일 실행 플랜까지
               바로 써먹을 수 있게 한 번에 정리해드립니다.
             </p>
+            <div className="grid gap-2 pt-1 sm:grid-cols-3">
+              <Badge className="justify-center border-white/15 bg-white/8 text-white">리뷰</Badge>
+              <Badge className="justify-center border-white/15 bg-white/8 text-white">메뉴</Badge>
+              <Badge className="justify-center border-white/15 bg-white/8 text-white">홍보</Badge>
+            </div>
           </CardContent>
         </Card>
 
@@ -245,7 +250,7 @@ export default async function Home() {
             <Badge className="w-fit bg-white">왜 쓰는지 바로 보이게</Badge>
             <CardTitle className="text-2xl font-semibold">보고 끝나는 게 아니라</CardTitle>
           </CardHeader>
-          <CardContent className="grid auto-rows-fr gap-4 sm:grid-cols-2">
+          <CardContent className="grid auto-rows-fr gap-4 md:grid-cols-2">
             {reasons.map((reason) => (
               <ReasonItem
                 key={reason.title}
