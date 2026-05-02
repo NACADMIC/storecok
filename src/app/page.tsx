@@ -28,7 +28,7 @@ const features = [
     icon: Megaphone,
     title: "홍보 진단",
     description:
-      "배달앱, SNS, 전단 문구를 매장 상황에 맞게 정리해 비용 큰 대행 없이도 직접 실행할 수 있게 돕습니다.",
+      "배달앱, SNS, 전단 문구를 매장 상황에 맞게 정리해 여기서 바로 실행할 수 있게 돕습니다.",
   },
 ];
 
@@ -113,7 +113,7 @@ export default async function Home() {
               매장 상황을 기준으로 먼저 손봐야 할 일과 맞춤형 전략, 마케팅, 홍보 방법을 정리해드립니다.
             </p>
             <p className="mt-3 max-w-[34rem] text-sm leading-7 text-[#5f574e] sm:text-base sm:leading-8">
-              비싼 비용 내고 마케팅 업체 맡기기 전에, 매장콕으로 사장님이 직접 실행할 수 있게 도와드립니다.
+              매장콕에서 홍보 방법을 실제로 바로 안내하고, 사장님이 직접 실행할 수 있게 정리해드립니다.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -245,9 +245,9 @@ export default async function Home() {
               사장님이 오늘 직접 실행할 해결책과 맞춤형 전략, 마케팅, 홍보 방법을 순서대로 제안합니다.
             </p>
             <p>
-              비싼 대행 비용을 먼저 쓰기보다, 매장콕으로 셀프 마케팅을 돌릴 수 있게
+              매장콕 안에서 셀프 마케팅을 바로 돌릴 수 있게
               <br />
-              문구와 실행 순서를 현실적으로 정리해드립니다.
+              문구, 실행 순서, 운영 기준을 현실적으로 정리해드립니다.
             </p>
             <div className="grid gap-2 pt-1 sm:grid-cols-3">
               <Badge className="justify-center border-white/15 bg-white/8 text-white">리뷰</Badge>
