@@ -59,6 +59,11 @@ const reasons = [
     title: "복붙 가능한 결과물",
     description: "리뷰 답글, 홍보 문구, 실행안까지 바로 복붙해서 쓸 수 있게 드립니다.",
   },
+  {
+    title: "뭐부터 할지 먼저 정리",
+    description:
+      "내용만 길게 늘어놓지 않고, 뭘 먼저 바꿔야 매출과 리뷰에 도움이 되는지부터 짚어드립니다.",
+  },
 ];
 
 export default async function Home() {
@@ -246,18 +251,8 @@ export default async function Home() {
                 key={reason.title}
                 title={reason.title}
                 description={reason.description}
-                className={reason.title === "복붙 가능한 결과물" ? "sm:col-span-2" : undefined}
               />
             ))}
-            <div className="flex h-full flex-col rounded-[22px] border border-[#e4d9cc] bg-white px-5 py-5 sm:col-span-2">
-              <div className="text-base font-semibold text-slate-950">
-                결국 중요한 건 뭐부터 할지입니다
-              </div>
-              <p className="mt-2 max-w-[42ch] text-sm leading-6 text-muted-foreground">
-                매장콕은 내용만 길게 늘어놓지 않고, 뭘 먼저 바꿔야 매출과 리뷰에
-                도움이 되는지부터 짚어드립니다.
-              </p>
-            </div>
           </CardContent>
         </Card>
       </section>
@@ -268,18 +263,12 @@ export default async function Home() {
 function ReasonItem({
   title,
   description,
-  className,
 }: {
   title: string;
   description: string;
-  className?: string;
 }) {
   return (
-    <div
-      className={`flex min-h-[164px] h-full flex-col rounded-[22px] border border-[#e4d9cc] bg-white px-5 py-5 ${
-        className ?? ""
-      }`}
-    >
+    <div className="flex min-h-[164px] h-full flex-col rounded-[22px] border border-[#e4d9cc] bg-white px-5 py-5">
       <div className="text-base font-semibold text-slate-950">{title}</div>
       <p className="mt-2 text-sm leading-6 text-muted-foreground">{description}</p>
     </div>
