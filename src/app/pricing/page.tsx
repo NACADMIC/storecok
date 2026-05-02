@@ -6,9 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const planItems = [
+  "모든 진단 기능 전체 사용 (리뷰/메뉴/홍보/매출)",
   "매장별 진단 리포트 무제한 생성",
+  "리뷰 관리 + 리뷰 답글 달기 가이드",
+  "매장 상황별 운영 매뉴얼",
+  "배달 상황별 운영 매뉴얼",
+  "셀프 마케팅/홍보 방법 안내",
   "리뷰 답글 예시와 홍보 문구 전체 열람",
   "7일 실행 플랜과 우선순위 개선안 저장",
+  "프리미엄 진단보고서 (결제 후 2영업일 내)",
   "지난 리포트 다시 보기",
 ];
 
@@ -19,11 +25,11 @@ export default function PricingPage() {
         <CardContent className="px-6 py-8 sm:px-8 sm:py-10">
           <Badge>구독 안내</Badge>
           <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-            보고서 전체를 보려면 구독으로 이어가시면 됩니다
+            매장콕 Pro 하나로 모든 기능을 사용하실 수 있습니다
           </h1>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
-            데모에서 가려진 실행안, 답글 예시, 홍보 문구, 7일 플랜까지 구독 후 바로
-            열람할 수 있게 구성했습니다.
+            진단만 보는 구성이 아니라, 해결책/매뉴얼/홍보 방법까지 매장 운영에 필요한
+            기능을 Pro에서 모두 사용하실 수 있게 구성했습니다.
           </p>
         </CardContent>
       </Card>
@@ -34,7 +40,7 @@ export default function PricingPage() {
             <div>
               <CardTitle className="text-2xl text-white">매장콕 Pro</CardTitle>
               <p className="mt-2 text-sm leading-6 text-white/72">
-                혼자 고민하던 운영 문제를 리포트로 정리해서 바로 실행하는 플랜
+                리뷰관리, 운영 매뉴얼, 셀프 마케팅까지 한 번에 해결하는 통합 플랜
               </p>
             </div>
             <div className="text-right">
