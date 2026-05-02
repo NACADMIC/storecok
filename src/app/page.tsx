@@ -213,13 +213,15 @@ export default async function Home() {
         ))}
       </section>
 
-      <section className="grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
-        <Card className="bg-slate-950 text-white">
+      <section className="grid items-start gap-5 lg:grid-cols-[0.92fr_1.08fr]">
+        <Card className="self-start bg-slate-950 text-white">
           <CardHeader>
             <Badge className="w-fit border-white/15 bg-white/8 text-white">
               이렇게 도와드립니다
             </Badge>
-            <CardTitle className="text-2xl font-semibold">말만 많은 리포트 말고</CardTitle>
+            <CardTitle className="text-2xl font-semibold text-white">
+              말만 많은 리포트 말고
+            </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-sm leading-7 text-white/70">
             <p>
@@ -244,6 +246,7 @@ export default async function Home() {
                 key={reason.title}
                 title={reason.title}
                 description={reason.description}
+                className={reason.title === "복붙 가능한 결과물" ? "sm:col-span-2" : undefined}
               />
             ))}
             <div className="flex h-full flex-col rounded-[22px] border border-[#e4d9cc] bg-white px-5 py-5 sm:col-span-2">
@@ -265,12 +268,18 @@ export default async function Home() {
 function ReasonItem({
   title,
   description,
+  className,
 }: {
   title: string;
   description: string;
+  className?: string;
 }) {
   return (
-    <div className="flex min-h-[164px] h-full flex-col rounded-[22px] border border-[#e4d9cc] bg-white px-5 py-5">
+    <div
+      className={`flex min-h-[164px] h-full flex-col rounded-[22px] border border-[#e4d9cc] bg-white px-5 py-5 ${
+        className ?? ""
+      }`}
+    >
       <div className="text-base font-semibold text-slate-950">{title}</div>
       <p className="mt-2 text-sm leading-6 text-muted-foreground">{description}</p>
     </div>
