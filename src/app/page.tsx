@@ -86,7 +86,8 @@ export default async function Home() {
 
             <div className="mt-6 space-y-3">
               <h1 className="max-w-[15ch] text-[2rem] font-semibold leading-[1.02] tracking-[-0.05em] text-slate-950 sm:text-[3rem] lg:text-[3.55rem]">
-                <span className="block">매장 고민, 감으로 버티지 말고</span>
+                <span className="block">매장 고민,</span>
+                <span className="block whitespace-nowrap">감으로 버티지 말고</span>
                 <span className="mt-1 block">
                   <span className="inline-block rounded-full bg-[#fff2a8] px-3 py-1 align-middle text-[0.56em] sm:px-4">
                     3분 만에
