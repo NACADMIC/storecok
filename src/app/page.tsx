@@ -79,21 +79,22 @@ export default async function Home() {
             </div>
 
             <div className="mt-6 space-y-3">
-              <div className="flex flex-wrap items-end gap-x-3 gap-y-2 lg:flex-nowrap lg:gap-x-4">
-                <h1 className="max-w-[14ch] text-[2rem] font-semibold leading-[1.02] tracking-[-0.05em] text-slate-950 sm:text-[3rem] lg:text-[3.55rem]">
-                  <span className="block">리뷰, 메뉴, 홍보</span>
-                  <span className="mt-1 block">
-                    매출 고민을
-                    <span className="ml-2 inline-block rounded-full bg-[#fff2a8] px-3 py-1 align-middle text-[0.56em] sm:px-4">
-                      한 번에
-                    </span>
+              <h1 className="max-w-[12ch] text-[2rem] font-semibold leading-[1.02] tracking-[-0.05em] text-slate-950 sm:text-[3rem] lg:text-[3.55rem]">
+                <span className="block">리뷰, 메뉴, 홍보</span>
+                <span className="mt-1 block">
+                  매출 고민을
+                  <span className="ml-2 inline-block rounded-full bg-[#fff2a8] px-3 py-1 align-middle text-[0.56em] sm:px-4">
+                    한 번에
                   </span>
-                </h1>
+                </span>
+              </h1>
+              <div className="flex items-center gap-4">
                 <img
                   src="/logo2.png"
                   alt="매장콕"
-                  className="h-auto w-full max-w-[150px] object-contain sm:max-w-[190px] lg:max-w-[220px]"
+                  className="h-auto w-full max-w-[150px] object-contain sm:max-w-[180px] lg:max-w-[210px]"
                 />
+                <div className="hidden h-px flex-1 bg-[#e4d9cc] sm:block" />
               </div>
             </div>
 
@@ -119,7 +120,7 @@ export default async function Home() {
               {miniStats.map((item) => (
                 <div
                   key={item.label}
-                  className="flex h-full flex-col rounded-[22px] border border-[#e4d9cc] bg-white px-4 py-4"
+                  className="flex min-h-[112px] h-full flex-col rounded-[22px] border border-[#e4d9cc] bg-white px-4 py-4"
                 >
                   <div className="text-xs font-semibold tracking-[0.08em] text-[#8a7a69]">
                     {item.label}
@@ -198,7 +199,7 @@ export default async function Home() {
 
       <section className="grid gap-5 md:grid-cols-3">
         {features.map((feature) => (
-          <Card key={feature.title} className="flex h-full flex-col bg-white/96">
+          <Card key={feature.title} className="flex min-h-[232px] h-full flex-col bg-white/96">
             <CardHeader>
               <div className="flex h-12 w-12 items-center justify-center rounded-[18px] border border-border bg-[#fff2a8] text-slate-950">
                 <feature.icon className="size-5" />
@@ -269,7 +270,7 @@ function ReasonItem({
   description: string;
 }) {
   return (
-    <div className="flex h-full flex-col rounded-[22px] border border-[#e4d9cc] bg-white px-5 py-5">
+    <div className="flex min-h-[164px] h-full flex-col rounded-[22px] border border-[#e4d9cc] bg-white px-5 py-5">
       <div className="text-base font-semibold text-slate-950">{title}</div>
       <p className="mt-2 text-sm leading-6 text-muted-foreground">{description}</p>
     </div>
