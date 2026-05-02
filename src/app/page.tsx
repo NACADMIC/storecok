@@ -17,52 +17,53 @@ const features = [
   {
     icon: MessageSquareText,
     title: "리뷰 진단",
-    description: "반복 불만, 답글 톤, 평점에 영향을 주는 포인트를 먼저 정리합니다.",
+    description: "리뷰에서 반복되는 불만과 답글 흐름을 보고 먼저 손볼 부분을 짚어드립니다.",
   },
   {
     icon: ClipboardCheck,
     title: "메뉴 진단",
-    description: "객단가를 올릴 메뉴 조합과 약한 메뉴 보완 아이디어를 제안합니다.",
+    description: "객단가와 재주문 흐름을 기준으로 메뉴 구성에서 약한 지점을 정리해드립니다.",
   },
   {
     icon: Megaphone,
     title: "홍보 진단",
-    description: "SNS, 전단, 배달앱 문구까지 바로 올릴 수 있게 뽑아드립니다.",
+    description: "배달앱, SNS, 전단 문구를 매장 상황에 맞게 바로 써먹을 형태로 드립니다.",
   },
 ];
 
 const miniStats = [
   { label: "입력 시간", value: "3분" },
-  { label: "진단 방식", value: "맞춤 정리" },
-  { label: "결과물", value: "7일 실행안" },
+  { label: "진단 기준", value: "매장 상황 중심" },
+  { label: "결과물", value: "7일 실행 플랜" },
 ];
 
 const outputPreview = [
-  "가장 큰 문제 3개",
-  "우선순위 개선안",
+  "가장 먼저 고쳐야 할 문제 3가지",
   "리뷰 답글 예시",
-  "SNS/전단 홍보 문구",
+  "메뉴 구성 개선안",
+  "배달앱/SNS 홍보 문구",
   "7일 실행 플랜",
 ];
 
 const reasons = [
   {
-    title: "입력하면 바로 결과",
+    title: "우선순위를 먼저 확인",
     description:
-      "매장 상황과 고민만 적으면 지금 필요한 내용만 딱 뽑아서 정리해드립니다.",
+      "긴 분석보다, 지금 당장 무엇부터 바꿔야 하는지 먼저 보여드립니다.",
   },
   {
-    title: "사장님 말로 풀어줌",
-    description: "어려운 말 말고, 오늘 뭘 해야 하는지 바로 읽히게 풀어서 써드립니다.",
+    title: "어려운 용어 없이 쉽게 설명",
+    description: "마케팅 용어보다, 오늘 무엇을 바꾸면 되는지 중심으로 알려드립니다.",
   },
   {
-    title: "복붙 가능한 결과물",
-    description: "리뷰 답글, 홍보 문구, 실행안까지 바로 복붙해서 쓸 수 있게 드립니다.",
-  },
-  {
-    title: "뭐부터 할지 먼저 정리",
+    title: "바로 붙여 넣어 쓸 수 있는 문구",
     description:
-      "내용만 길게 늘어놓지 않고, 뭘 먼저 바꿔야 매출과 리뷰에 도움이 되는지부터 짚어드립니다.",
+      "리뷰 답글, 배달앱 소개글, SNS 문구, 전단 문구까지 바로 사용할 수 있게 제공합니다.",
+  },
+  {
+    title: "실행 순서까지 한 번에",
+    description:
+      "리뷰, 메뉴, 홍보를 따로 보지 않고 연결해서 7일 실행 순서로 정리해드립니다.",
   },
 ];
 
@@ -84,13 +85,13 @@ export default async function Home() {
             </div>
 
             <div className="mt-6 space-y-3">
-              <h1 className="max-w-[13ch] text-[2rem] font-semibold leading-[1.02] tracking-[-0.05em] text-slate-950 sm:text-[3rem] lg:text-[3.55rem]">
-                <span className="block">리뷰, 메뉴, 홍보</span>
+              <h1 className="max-w-[15ch] text-[2rem] font-semibold leading-[1.02] tracking-[-0.05em] text-slate-950 sm:text-[3rem] lg:text-[3.55rem]">
+                <span className="block">매장 고민, 감으로 버티지 말고</span>
                 <span className="mt-1 block">
-                  매출 고민을
-                  <span className="ml-2 inline-block rounded-full bg-[#fff2a8] px-3 py-1 align-middle text-[0.56em] sm:px-4">
-                    한 번에
+                  <span className="inline-block rounded-full bg-[#fff2a8] px-3 py-1 align-middle text-[0.56em] sm:px-4">
+                    3분 만에
                   </span>
+                  <span className="ml-2">진단하세요</span>
                 </span>
               </h1>
               <div className="flex items-center gap-4 sm:flex-nowrap">
@@ -104,9 +105,9 @@ export default async function Home() {
             </div>
 
             <p className="mt-5 max-w-[34rem] text-sm leading-7 text-[#5f574e] sm:text-base sm:leading-8 lg:text-lg">
-              매장콕은 AI 분석에 현장 운영 감각을 더해
+              리뷰가 문제인지, 메뉴가 약한지, 홍보 문구가 부족한지
               <br className="hidden sm:block" />
-              지금 뭘 먼저 손봐야 하는지 바로 보이게 정리해드립니다.
+              매장 상황을 기준으로 먼저 손봐야 할 일을 정리해드립니다.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -117,7 +118,7 @@ export default async function Home() {
                 </Link>
               </Button>
               <Button asChild variant="secondary" size="lg">
-                <Link href="/demo-report">데모 리포트 보기</Link>
+                <Link href="/demo-report">결과 예시 보기</Link>
               </Button>
             </div>
 
@@ -148,7 +149,7 @@ export default async function Home() {
                     진단 예시
                   </div>
                   <h2 className="mt-3 text-xl font-semibold tracking-tight sm:text-2xl">
-                    이런 식으로 정리해드립니다
+                    매장 상태를 한눈에 보고, 바로 실행할 수 있게 정리합니다
                   </h2>
                 </div>
                 <div className="w-fit rounded-[22px] bg-white/8 px-4 py-3 text-right">
@@ -175,7 +176,7 @@ export default async function Home() {
                 </div>
               </div>
               <Button asChild variant="secondary" className="mt-6 w-full sm:w-auto">
-                <Link href="/demo-report">데모 리포트 열어보기</Link>
+                <Link href="/demo-report">결과 예시 보기</Link>
               </Button>
             </CardContent>
           </Card>
@@ -184,7 +185,7 @@ export default async function Home() {
             <CardContent className="px-5 py-6 sm:px-7 sm:py-8">
               <div className="flex items-center gap-2 text-sm font-semibold text-slate-950">
                 <BadgeCheck className="size-4 text-brand-600" />
-                리포트 포함 항목
+                진단 후 이런 내용을 받습니다
               </div>
               <div className="mt-5 grid gap-3">
                 {outputPreview.map((item) => (
@@ -222,20 +223,20 @@ export default async function Home() {
         <Card className="self-start bg-slate-950 text-white">
           <CardHeader>
             <Badge className="w-fit border-white/15 bg-white/8 text-white">
-              이렇게 도와드립니다
+              신뢰 기준
             </Badge>
             <CardTitle className="text-2xl font-semibold text-white">
-              말만 많은 리포트 말고
+              AI가 빠르게 분석하고, 실제 장사 기준으로 정리합니다
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-sm leading-7 text-white/70">
             <p>
-              매장콕은 AI로 빠르게 정리하되, 실제 장사에서 통하는 기준을 같이 담아서
-              지금 손대야 할 문제부터 먼저 보여드립니다.
+              매장콕은 단순한 마케팅 문구 생성기가 아닙니다.
             </p>
             <p>
-              리뷰 답글 예시, 메뉴 보완안, SNS 문구, 전단 문구, 7일 실행 플랜까지
-              바로 써먹을 수 있게 한 번에 정리해드립니다.
+              리뷰, 메뉴, 홍보 상황을 함께 보고
+              <br />
+              사장님이 오늘 바로 실행할 수 있는 순서로 제안합니다.
             </p>
             <div className="grid gap-2 pt-1 sm:grid-cols-3">
               <Badge className="justify-center border-white/15 bg-white/8 text-white">리뷰</Badge>
@@ -248,7 +249,9 @@ export default async function Home() {
         <Card className="paper-panel border-[#d8cab8] bg-[#fffaf4]">
           <CardHeader>
             <Badge className="w-fit bg-white">왜 쓰는지 바로 보이게</Badge>
-            <CardTitle className="text-2xl font-semibold">보고 끝나는 게 아니라</CardTitle>
+            <CardTitle className="text-2xl font-semibold">
+              읽고 끝나는 리포트가 아니라, 바로 실행할 개선안
+            </CardTitle>
           </CardHeader>
           <CardContent className="grid auto-rows-fr gap-4 md:grid-cols-2">
             {reasons.map((reason) => (
